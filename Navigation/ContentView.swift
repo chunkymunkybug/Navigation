@@ -15,15 +15,23 @@ struct ContentView: View {
             Text("This is the root view 🌳")
                 .font(.title)
                 .fontWeight(.bold)
-            NavigationLink(destination: Text("You've arrived to the second view! 🎉")
+            
+            NavigationLink(destination: SecondView ()
                 .font(.title2)
                 .fontWeight(.bold)) {
                 Text ("Click Me")
                 }
-            NavigationLink(destination: Image("redpanda")) {
-                Text ("No Click Me!!")
-            }
-            } //end of V stack
+            
+            NavigationLink(destination:Image("redpanda") ) {
+                Text ("Don't Click Me!!")
+                    .foregroundColor(Color.pink)
+                    }
+            
+                } //end of V stack
+            
+        .navigationTitle("Home") //labels the back button
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
         }//end of nav stack
     }
 }
