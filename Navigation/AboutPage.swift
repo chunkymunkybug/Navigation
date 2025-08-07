@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct SecondView: View {
+struct AboutPage: View {
     var body: some View {
-        Text("You've arrived to the second view! 🎉")
-            .font(.title2)
+        Text("About Us")
+            .font(.title)
             .fontWeight(.bold)
+        Image("redpanda")
     }
 }
 
 #Preview {
-    SecondView()
+    AboutPage()
 }

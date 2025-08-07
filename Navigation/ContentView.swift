@@ -12,26 +12,32 @@ struct ContentView: View {
         
     NavigationStack {//beginning of nav stack
         VStack {
-            Text("This is the root view 🌳")
+            Text("Welcome to the Home Page!")
                 .font(.title)
                 .fontWeight(.bold)
+                .padding ()
             
-            NavigationLink(destination: SecondView ()
+            NavigationLink(destination: AboutPage ()
                 .font(.title2)
                 .fontWeight(.bold)) {
-                Text ("Click Me")
+                Text ("🔍")
                 }
             
-            NavigationLink(destination:Image("redpanda") ) {
-                Text ("Don't Click Me!!")
-                    .foregroundColor(Color.pink)
+            NavigationLink(destination: ContactPage () ) {
+                Text ("📞")
                     }
+            .padding ()
+            
+            NavigationLink(destination: HelpPage ()) {
+                Text ("🚨")
+                }
             
                 } //end of V stack
             
         .navigationTitle("Home") //labels the back button
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(true)
+
         }//end of nav stack
     }
 }
